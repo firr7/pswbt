@@ -8,14 +8,76 @@
     year.textContent = new Date().getFullYear();
   }
 
-  const toggleHeroExpand = () => {
-    if (!heroMedia || window.innerWidth < 768) return;
-    if (window.scrollY > 80) heroMedia.classList.add("is-expanded");
-    else heroMedia.classList.remove("is-expanded");
-  };
+  if (heroMedia) {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-  window.addEventListener("scroll", toggleHeroExpand, { passive: true });
-  toggleHeroExpand();
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+    const getScrollProgress = () => {
+      if (window.innerWidth < 768) return 0;
+      return clamp(window.scrollY / 320, 0, 1);
+    };
+
+    const applyHeroState = (progress) => {
+      if (window.innerWidth < 768) {
+        heroMedia.style.removeProperty("width");
+        heroMedia.style.removeProperty("height");
+        heroMedia.style.removeProperty("transform");
+        return;
+      }
+
+      const width = 360 + 180 * progress;
+      const height = 430 + 90 * progress;
+      const rotateY = -12 + 12 * progress;
+      const rotateX = 5 - 5 * progress;
+      const scale = 0.92 + 0.08 * progress;
+
+      heroMedia.style.width = `min(100%, ${width.toFixed(2)}px)`;
+      heroMedia.style.height = `${height.toFixed(2)}px`;
+      heroMedia.style.transform = `rotateY(${rotateY.toFixed(
+        2
+      )}deg) rotateX(${rotateX.toFixed(2)}deg) scale(${scale.toFixed(4)})`;
+    };
+
+    let targetProgress = getScrollProgress();
+    let currentProgress = targetProgress;
+    let rafId = null;
+
+    const animateHero = () => {
+      currentProgress += (targetProgress - currentProgress) * 0.12;
+
+      if (Math.abs(targetProgress - currentProgress) < 0.001) {
+        currentProgress = targetProgress;
+      }
+
+      applyHeroState(currentProgress);
+
+      if (currentProgress !== targetProgress) {
+        rafId = window.requestAnimationFrame(animateHero);
+      } else {
+        rafId = null;
+      }
+    };
+
+    const updateHero = () => {
+      targetProgress = getScrollProgress();
+
+      if (prefersReducedMotion) {
+        currentProgress = targetProgress;
+        applyHeroState(currentProgress);
+        return;
+      }
+
+      if (!rafId) {
+        rafId = window.requestAnimationFrame(animateHero);
+      }
+    };
+
+    window.addEventListener("scroll", updateHero, { passive: true });
+    window.addEventListener("resize", updateHero, { passive: true });
+    updateHero();
+  }
 
   if (form && feedback) {
     form.addEventListener("submit", (event) => {
