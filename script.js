@@ -99,6 +99,36 @@
     });
   }
 
+  const tiltedGrid = document.querySelector("[data-tilted-grid]");
+
+  if (tiltedGrid) {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+    const updateTiltedGrid = () => {
+      if (prefersReducedMotion || window.innerWidth < 768) {
+        tiltedGrid.style.setProperty("--grid-progress", "0.5");
+        return;
+      }
+
+      const rect = tiltedGrid.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || 1;
+      const progress = clamp(
+        (viewportHeight - rect.top) / (viewportHeight + rect.height),
+        0,
+        1
+      );
+
+      tiltedGrid.style.setProperty("--grid-progress", progress.toFixed(4));
+    };
+
+    window.addEventListener("scroll", updateTiltedGrid, { passive: true });
+    window.addEventListener("resize", updateTiltedGrid, { passive: true });
+    updateTiltedGrid();
+  }
+
   if (window.lucide) {
     window.lucide.createIcons();
   }

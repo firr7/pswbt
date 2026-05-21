@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#03132b" />
+    <meta
+      name="description"
+      content="Galleria fotografica Aquanova con piscine, aree wellness e lavorazioni realizzate dall'azienda."
+    />
+    <title>Aquanova | Galleria lavori</title>
+
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                navy: "#03132b",
+                cyanSoft: "#79ecff",
+                cyanDeep: "#0ca5c4",
+                glass: "rgba(255, 255, 255, 0.66)",
+              },
+              fontFamily: {
+                sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+              },
+              boxShadow: {
+                liquid: "0 20px 60px rgba(3, 19, 43, 0.18)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-cyanSoft/50">
+    <header class="fixed inset-x-0 top-0 z-40">
+      <div class="mx-auto mt-4 flex w-[min(1120px,92vw)] items-center justify-between rounded-full border border-white/30 bg-glass px-5 py-3 shadow-liquid backdrop-blur-xl">
+        <a href="index.html" class="text-sm font-extrabold tracking-[0.2em] text-navy">AQUANOVA</a>
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+          <a class="transition hover:text-navy" href="index.html#servizi">Servizi</a>
+          <a class="transition hover:text-navy" href="index.html#progetti">Progetti</a>
+          <a class="font-semibold text-navy" href="galleria.html">Galleria</a>
+          <a class="transition hover:text-navy" href="index.html#contatti">Contatti</a>
+        </nav>
+        <a href="index.html#contatti" class="nav-cta rounded-full px-4 py-2 text-xs font-semibold text-white transition">Richiedi preventivo</a>
+      </div>
+    </header>
+
+    <main class="gallery-page overflow-x-hidden pt-28">
+      <section class="mx-auto flex w-[min(1120px,92vw)] flex-col gap-6 py-12 text-center md:py-20" data-aos="fade-up">
+        <p class="mx-auto inline-flex items-center rounded-full border border-cyanSoft/40 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyanDeep backdrop-blur">
+          Galleria Aquanova
+        </p>
+        <h1 class="text-4xl font-extrabold leading-[0.95] text-navy sm:text-6xl">
+          Piscine, spa e lavorazioni
+          <span class="text-cyanDeep">raccontate per immagini</span>
+        </h1>
+        <p class="mx-auto max-w-3xl text-base leading-relaxed text-slate-600 sm:text-lg">
+          Una pagina dedicata alle realizzazioni dell'azienda: piscine premium, zone idromassaggio, dettagli costruttivi e finiture installate per clienti residenziali e hospitality.
+        </p>
+      </section>
+
+      <section class="scroll-tilted-grid" aria-label="Galleria fotografica lavori Aquanova">
+        <div class="scroll-tilted-grid__overlay"></div>
+        <div class="scroll-tilted-grid__inner">
+          <div class="scroll-tilted-grid__intro" data-aos="fade-right">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyanDeep">I nostri lavori</p>
+            <h2 class="mt-4 text-3xl font-extrabold text-navy sm:text-5xl">Una selezione visuale ispirata al layout di 21st.dev.</h2>
+            <p class="mt-4 max-w-md text-sm leading-relaxed text-slate-600 sm:text-base">
+              Scorri la pagina per esplorare una griglia inclinata con immagini di piscine contemporanee, aree relax e fasi di realizzazione che riflettono il posizionamento premium di Aquanova.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="index.html#contatti" class="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-900">Parla con il team</a>
+              <a href="index.html" class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-cyanDeep">Torna alla home</a>
+            </div>
+          </div>
+
+          <div class="scroll-tilted-grid__stage" data-tilted-grid>
+            <div class="scroll-tilted-grid__track">
+              <div class="scroll-tilted-grid__column">
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=900&q=80" alt="Piscina panoramica con chaise longue" loading="lazy" />
+                  <figcaption>Infinity panoramica</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=900&q=80" alt="Piscina moderna con acqua cristallina" loading="lazy" />
+                  <figcaption>Area outdoor premium</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Piscina immersa nel verde" loading="lazy" />
+                  <figcaption>Progetto residenziale</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80" alt="Dettaglio di rivestimenti e bordo piscina" loading="lazy" />
+                  <figcaption>Dettagli materici</figcaption>
+                </figure>
+              </div>
+
+              <div class="scroll-tilted-grid__column">
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1560448075-bb485b067938?auto=format&fit=crop&w=900&q=80" alt="Piscina con deck in legno e illuminazione naturale" loading="lazy" />
+                  <figcaption>Deck & comfort</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Spa e idromassaggio di design" loading="lazy" />
+                  <figcaption>Spa signature</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Zona wellness interna con idromassaggio" loading="lazy" />
+                  <figcaption>Wellness indoor</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" alt="Piscina elegante in villa contemporanea" loading="lazy" />
+                  <figcaption>Villa contemporanea</figcaption>
+                </figure>
+              </div>
+
+              <div class="scroll-tilted-grid__column">
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1576013551627-0d7d3f8f16f1?auto=format&fit=crop&w=900&q=80" alt="Piscina serale illuminata" loading="lazy" />
+                  <figcaption>Luci serali</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Vasca idromassaggio con finiture chiare" loading="lazy" />
+                  <figcaption>Relax su misura</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80" alt="Piscina outdoor per struttura hospitality" loading="lazy" />
+                  <figcaption>Hospitality collection</figcaption>
+                </figure>
+                <figure class="gallery-card">
+                  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Area spa con linee essenziali" loading="lazy" />
+                  <figcaption>Benessere essenziale</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-7 text-center text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
+      © <span id="year"></span> Aquanova · Piscine & Wellness
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
