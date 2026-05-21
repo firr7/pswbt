@@ -15,6 +15,25 @@ body {
   background: var(--surface);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+.nav-cta {
+  background: #0f172a;
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.28);
+}
+
+.nav-cta:hover {
+  background: #020617;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(2, 6, 23, 0.36);
+}
+
 .hero-shell {
   background:
     radial-gradient(circle at 10% 15%, rgba(121, 236, 255, 0.32), transparent 36%),
@@ -47,7 +66,7 @@ body {
   height: 430px;
   margin-inline: auto;
   transform: rotateY(-12deg) rotateX(5deg) scale(0.92);
-  transition: transform 0.28s ease, width 0.28s ease, height 0.28s ease;
+  transition: box-shadow 0.28s ease;
   will-change: transform, width, height;
 }
 
