@@ -1,1 +1,199 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#03132b" />
+    <meta
+      name="description"
+      content="Costruzione piscine, manutenzione professionale e installazione impianti idromassaggio dal design premium."
+    />
+    <title>Aquanova | Piscine & Idromassaggio</title>
 
+    <link rel="manifest" href="manifest.json" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind = {
+        config: {
+          theme: {
+            extend: {
+              colors: {
+                navy: "#03132b",
+                cyanSoft: "#79ecff",
+                cyanDeep: "#0ca5c4",
+                glass: "rgba(255, 255, 255, 0.66)",
+              },
+              fontFamily: {
+                sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
+              },
+              boxShadow: {
+                liquid: "0 20px 60px rgba(3, 19, 43, 0.18)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-cyanSoft/50">
+    <header class="fixed inset-x-0 top-0 z-40">
+      <div class="mx-auto mt-4 flex w-[min(1120px,92vw)] items-center justify-between rounded-full border border-white/30 bg-glass px-5 py-3 shadow-liquid backdrop-blur-xl">
+        <a href="#" class="text-sm font-extrabold tracking-[0.2em] text-navy">AQUANOVA</a>
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+          <a class="transition hover:text-navy" href="#servizi">Servizi</a>
+          <a class="transition hover:text-navy" href="#progetti">Progetti</a>
+          <a class="transition hover:text-navy" href="#contatti">Contatti</a>
+        </nav>
+        <a href="#contatti" class="rounded-full bg-navy px-4 py-2 text-xs font-semibold text-white transition hover:bg-slate-800">Richiedi preventivo</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-shell relative flex min-h-[100svh] items-center overflow-hidden px-4 pt-28 md:px-8">
+        <div class="hero-glow"></div>
+        <div class="mx-auto grid w-[min(1120px,100%)] gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div class="space-y-8" data-aos="fade-up">
+            <p class="inline-flex items-center rounded-full border border-cyanSoft/40 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyanDeep backdrop-blur">Design acquatico contemporaneo</p>
+            <h1 class="text-4xl font-extrabold leading-[0.95] text-navy sm:text-6xl lg:text-7xl">
+              Piscine da sogno,<br />
+              <span class="text-cyanDeep">esperienza wellness</span>
+              su misura.
+            </h1>
+            <p class="max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+              Progettiamo e realizziamo piscine premium, programmi di manutenzione impeccabili e impianti idromassaggio ad alte prestazioni per residenze e hospitality.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#contatti" class="rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-900">Prenota consulenza</a>
+              <a href="#progetti" class="rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 transition hover:-translate-y-0.5 hover:border-cyanDeep">Scopri i progetti</a>
+            </div>
+          </div>
+
+          <div class="hero-media-wrap" data-aos="zoom-in" data-aos-delay="150">
+            <div id="hero-media" class="hero-media">
+              <img
+                src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?auto=format&fit=crop&w=1400&q=80"
+                alt="Piscina moderna con acqua cristallina"
+                class="h-full w-full object-cover"
+              />
+              <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/30 bg-white/10 p-4 text-white backdrop-blur-lg">
+                <div>
+                  <p class="text-[11px] uppercase tracking-[0.22em] text-cyanSoft">Villa Horizon</p>
+                  <p class="text-sm font-semibold">Piscina infinity + spa integrata</p>
+                </div>
+                <i data-lucide="waves" class="h-5 w-5"></i>
+              </div>
+            </div>
+            <p class="mt-3 text-center text-xs font-medium uppercase tracking-[0.2em] text-slate-500">Scroll per espandere</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="servizi" class="mx-auto w-[min(1120px,92vw)] py-24">
+        <div class="mb-12 flex flex-wrap items-end justify-between gap-6" data-aos="fade-up">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyanDeep">Servizi principali</p>
+            <h2 class="mt-3 text-3xl font-extrabold text-navy sm:text-4xl">Tre pilastri, un unico standard premium.</h2>
+          </div>
+          <p class="max-w-md text-sm leading-relaxed text-slate-600">Un approccio sartoriale dalla fase concept alla gestione ordinaria, con team tecnico specializzato e materiali professionali.</p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-12 md:grid-rows-2">
+          <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-liquid md:col-span-7 md:row-span-2" data-aos="fade-up">
+            <i data-lucide="construction" class="mb-6 h-8 w-8 text-cyanDeep"></i>
+            <h3 class="text-2xl font-bold text-navy">Costruzione Piscine</h3>
+            <p class="mt-4 text-slate-600">Progettazione 3D, scelta finiture luxury, impiantistica a basso consumo e consegna chiavi in mano con controllo qualità in ogni fase.</p>
+          </article>
+          <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-liquid md:col-span-5" data-aos="fade-up" data-aos-delay="100">
+            <i data-lucide="shield-check" class="mb-6 h-8 w-8 text-cyanDeep"></i>
+            <h3 class="text-xl font-bold text-navy">Manutenzione Piscine</h3>
+            <p class="mt-3 text-slate-600">Piani stagionali, monitoraggio chimico e assistenza rapida per acqua sempre perfetta e impianti efficienti.</p>
+          </article>
+          <article class="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-liquid md:col-span-5" data-aos="fade-up" data-aos-delay="180">
+            <i data-lucide="bath" class="mb-6 h-8 w-8 text-cyanDeep"></i>
+            <h3 class="text-xl font-bold text-navy">Impianti Idromassaggio</h3>
+            <p class="mt-3 text-slate-600">Installazione professionale indoor/outdoor con automazioni smart, cromoterapia e massimo comfort acustico.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="progetti" class="bg-white py-24">
+        <div class="mx-auto w-[min(1120px,92vw)]">
+          <div class="mb-12" data-aos="fade-up">
+            <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyanDeep">Galleria progetti</p>
+            <h2 class="mt-3 text-3xl font-extrabold text-navy sm:text-4xl">Realizzazioni che trasformano gli spazi.</h2>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <figure class="project-card" data-aos="zoom-in-up">
+              <img src="https://images.unsplash.com/photo-1560448075-bb485b067938?auto=format&fit=crop&w=900&q=80" alt="Piscina con deck in legno" loading="lazy" />
+              <figcaption>Urban Oasis</figcaption>
+            </figure>
+            <figure class="project-card" data-aos="zoom-in-up" data-aos-delay="90">
+              <img src="https://images.unsplash.com/photo-1576013551627-0d7d3f8f16f1?auto=format&fit=crop&w=900&q=80" alt="Piscina serale illuminata" loading="lazy" />
+              <figcaption>Blue Evening</figcaption>
+            </figure>
+            <figure class="project-card" data-aos="zoom-in-up" data-aos-delay="160">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Area idromassaggio di design" loading="lazy" />
+              <figcaption>Spa Signature</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contatti" class="mx-auto w-[min(780px,92vw)] py-24">
+        <div class="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm sm:p-10" data-aos="fade-up">
+          <p class="text-xs font-semibold uppercase tracking-[0.24em] text-cyanDeep">Contatti</p>
+          <h2 class="mt-3 text-3xl font-extrabold text-navy">Richiedi un preventivo personalizzato</h2>
+          <p class="mt-3 text-slate-600">Raccontaci il tuo progetto: ti ricontattiamo entro 24 ore con una proposta su misura.</p>
+
+          <form class="mt-8 grid gap-5" novalidate>
+            <label class="form-field">
+              <span>Nome e cognome</span>
+              <input type="text" name="name" placeholder="Mario Rossi" required />
+            </label>
+            <label class="form-field">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="nome@email.it" required />
+            </label>
+            <label class="form-field">
+              <span>Servizio di interesse</span>
+              <select name="service" required>
+                <option value="" selected disabled>Seleziona un servizio</option>
+                <option>Costruzione piscina</option>
+                <option>Manutenzione piscina</option>
+                <option>Impianto idromassaggio</option>
+              </select>
+            </label>
+            <label class="form-field">
+              <span>Dettagli progetto</span>
+              <textarea name="message" rows="4" placeholder="Descrivi dimensioni, location e tempistiche"></textarea>
+            </label>
+            <button type="submit" class="mt-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-900">Invia richiesta</button>
+            <p id="form-feedback" class="text-sm text-slate-600" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-7 text-center text-xs font-medium uppercase tracking-[0.2em] text-slate-500">
+      © <span id="year"></span> Aquanova · Piscine & Wellness
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
