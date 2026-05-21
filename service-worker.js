@@ -1,7 +1,8 @@
-const CACHE_NAME = "aquanova-static-v1";
+const CACHE_NAME = "aquanova-static-v2";
 const STATIC_ASSETS = [
   "./",
   "./index.html",
+  "./galleria.html",
   "./style.css",
   "./script.js",
   "./manifest.json"
